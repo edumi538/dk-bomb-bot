@@ -112,9 +112,9 @@ function SelectAndMoveMouse(TAM, x, y, width, height, Colors, fakecolor) {
   return counter;
 }
 function VerifyTimeout() {
-  var timeout = getCoordsFromPixelRelogar(963, 223, 'd60408');
+  var timeout = getCoordsFromPixelRelogar(963, 223, "d60408");
   if (timeout === true) {
-    console.log('Timeout');
+    console.log("Timeout");
     robot.moveMouse(963, 223);
     robot.mouseClick();
     robot.keyTap('f5');
@@ -125,13 +125,13 @@ function VerifyTimeout() {
 }
 
 function verifyKick(interval) {
-  var kickout = getCoordsFromPixelRelogar(743, 379, '461310');
+  var kickout = getCoordsFromPixelRelogar(743, 379, "461310");
   if (kickout === true) {
     interval ? clearInterval(interval) : null;
-    console.log('Kickado');
+    console.log("Kickado");
     robot.moveMouse(694, 517);
     robot.mouseClick();
-    robot.keyTap('f5');
+    robot.keyTap("f5");
     setTimeout(() => {
       relogar();
     }, 60000);
@@ -277,11 +277,9 @@ function relogar() {
   var contador = 0;
   var intervalRelogar3 = setInterval(function () {
     var saidaRelogar3 = getCoordsFromPixelRelogar(
-      652,
-      548,
-      screenSize.width === 1366 && screenSize.height === 768
-        ? 'b56d52'
-        : 'c5b23f'
+      screenSize.width === 1366 && screenSize.height === 768 ? 620 : 575,
+      screenSize.width === 1366 && screenSize.height === 768 ? 542 : 670,
+      "b57052"
     );
     if (saidaRelogar3 === true) {
       console.log('Achou a tela principal');

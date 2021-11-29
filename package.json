@@ -5,7 +5,9 @@
   "main": "electron/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron main.js"
+    "start": "electron .",
+    "build": "npx electron-packager . --icon assets/time-bomb.ico --out=builds",
+    "rebuild": "npm rebuild --runtime=electron --target=15.3.0 --disturl=https://atom.io/download/atom-shell --abi=98"
   },
   "keywords": [],
   "author": "",
