@@ -5,8 +5,7 @@
   "main": "electron/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron .",
-    "build": "npx electron-packager . --icon assets/time-bomb.ico --out=builds"
+    "start": "electron main.js"
   },
   "keywords": [],
   "author": "",
